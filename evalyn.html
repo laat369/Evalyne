@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evalyne Wambui Githua | Data Scientist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4e54c8;
+            --secondary: #8f94fb;
+            --dark: #1a1a2e;
+            --light: #f5f5f5;
+            --accent: #f64c72;
+            --deloitte-green: #86BC25;
+        }
+
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.2rem;
+            color: var(--primary);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .skill {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .education-item, .experience-item, .certification-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .education-item h3, .experience-item h3, .certification-item h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .date {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-img {
+            height: 200px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .project-info {
+            padding: 1.5rem;
+        }
+        
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        .certification-badge {
+            display: inline-block;
+            background-color: #ffd700;
+            color: #000;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-left: 0.5rem;
+            font-size: 0.8rem;
+        }
+        
+        .deloitte-card {
+            border-top: 4px solid var(--deloitte-green);
+        }
+        
+        .deloitte-card:hover {
+            box-shadow: 0 15px 30px rgba(134, 188, 37, 0.2);
+        }
+        
+        .deloitte-card h3 {
+            color: var(--deloitte-green) !important;
+        }
+        
+        .case-study-toggle {
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .case-study-content {
+            background-color: white;
+            animation: fadeIn 0.5s ease;
+            padding: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            section {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">📊 EWG</div>
+                <ul class="nav-links">
+                    <li><a href="#about">👩‍💻 About</a></li>
+                    <li><a href="#education">🎓 Education</a></li>
+                    <li><a href="#certifications">🏆 Certifications</a></li>
+                    <li><a href="#experience">💼 Experience</a></li>
+                    <li><a href="#projects">🚀 Projects</a></li>
+                    <li><a href="#contact">📬 Contact</a></li>
+                </ul>
+                </nav>
+            
+            <div class="hero">
+                <h1>Evalyne Wambui Githua</h1>
+                <p>📌 I Am A Certified Data Scientist & Machine Learning Specialist | HR & Business Analytics | AI Solutions Developer</p>
+                <a href="1.EVALYNE_WAMBUI_GITHUA_CV.docx" download class="btn">📥 Download CV</a>
+            </div>
+        </div>
+    </header>
+    
+    <section id="about">
+        <div class="container">
+            <h2>👩‍💻 About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>🔍 Results-driven Data Scientist with expertise in predictive modeling, statistical analysis, and machine learning (Python, TensorFlow, XGBoost). Proven ability to deliver high-impact solutions, including a 95.42%-accurate HR analytics model and automated workflows that reduce preprocessing time by 25%.</p>
+                    <p>💡 Adept at translating complex data into actionable insights through Tableau dashboards and Flask APIs. Combines technical rigor with domain knowledge in HR analytics and forensic technology.</p>
+                    
+                    <h3>🌟 Core Competencies</h3>
+                    <div class="skills">
+                        <span class="skill">🐍 Python</span>
+                        <span class="skill">📊 Pandas</span>
+                        <span class="skill">🤖 Scikit-learn</span>
+                        <span class="skill">🧠 TensorFlow</span>
+                        <span class="skill">🗃️ SQL</span>
+                        <span class="skill">⚡ XGBoost</span>
+                        <span class="skill">🌐 Flask API</span>
+                        <span class="skill">📈 Predictive Modeling</span>
+                        <span class="skill">📉 Statistical Analysis</span>
+                        <span class="skill">🔬 A/B Testing</span>
+                        <span class="skill">📊 Tableau</span>
+                        <span class="skill">📈 Power BI</span>
+                        <span class="skill">🔄 Git</span>
+                        <span class="skill">📓 Jupyter</span>
+                        <span class="skill">📊 Excel</span>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+    
+    <section id="education">
+        <div class="container">
+            <h2>🎓 Education</h2>
+            
+            <div class="education-item">
+                <h3>Diploma in Data Science & Analytics</h3>
+                <p class="date">📅 Expected 2026 | Zetech University</p>
+            </div>
+            
+            <div class="education-item">
+                <h3>Certified Data Scientist</h3>
+                <p class="date">📅 Feb-Jun 2024 | African Centre for Data Science & Analytics</p>
+                <ul>
+                    <li>⏳ 200+ hours: Advanced ML, CNN, Tableau, Big Data, Model Deployment (Flask)</li>
+                    <li>🎯 Capstone: End-to-end data pipeline execution</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="certifications">
+        <div class="container">
+            <h2>🏆 Certifications</h2>
+            
+            <div class="certification-item">
+                <h3>IABAC® Certified Data Scientist <span class="certification-badge">GOLD STANDARD</span></h3>
+                <p class="date">📅 2024</p>
+                <ul>
+                    <li>✅ Globally recognized certification in data science</li>
+                    <li>📜 Demonstrated expertise in machine learning and data analysis</li>
+                    <li>🖼️ Includes CNN image classification project</li>
+                </ul>
+            </div>
+            
+<div class="certification-item">
+                <h3>Deloitte Data Analytics Simulation</h3>
+                <p class="date">📅 Feb 2025</p>
+                <ul>
+                    <li>🔍 Created forensic data dashboards (Tableau)</li>
+                    <li>📊 Developed Excel reports for business decision-making</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience">
+        <div class="container">
+            <h2>💼 Professional Experience</h2>
+            
+            <div class="experience-item">
+                <h3>🧠 Machine Learning Intern | Intern Career</h3>
+                <p class="date">📅 Jul 2024</p>
+                <ul>
+                    <li>🏅 Ranked 'A' among 50+ interns by optimizing ML models (Python), improving accuracy by 20%.</li>
+                    <li>⚡ Automated data cleaning for 5+ datasets, reducing preprocessing time by 25%.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3>📊 Data Science Consultant | INX Future Inc.</h3>
+                <p class="date">📅 2024 (Self-directed project)</p>
+                <ul>
+                    <li>🎯 Developed XGBoost model (95.42% accuracy) to analyze 1,200 employees</li>
+                    <li>📈 Identified salary hikes (+48% correlation) as key performance driver</li>
+                    <li>📊 Delivered actionable HR insights via <a href="https://employee-performance-rating-e7cd5xyxkhkzabajbvsngs.streamlit.app/">interactive dashboard</a> (Streamlit)</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3>🏦 Job Shadowing Trainee | Diamond Trust Bank Kenya Limited (DTB)</h3>
+                <p class="date">📅 April 28 - May 9, 2025</p>
+                <ul>
+                    <li>🏛️ Gained exposure to commercial banking operations</li>
+                    <li>📚 Acquired foundational professional skills in financial services</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <div class="container">
+            <h2>🚀 Technical Projects</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    
+                    <div class="project-info">
+                        <h3>👥 Employee Performance Analysis</h3>
+                        <p>🔧 Python, XGBoost, Tableau | End-to-End Pipeline: Data cleaning → EDA → Hyperparameter tuning (GridSearchCV).</p>
+                        <p>💡 Impact: Recommended policy changes projected to boost satisfaction by 30%.</p>
+                        <div class="project-links">
+                            <a href="https://employee-performance-rating-e7cd5xyxkhkzabajbvsngs.streamlit.app/" class="btn">🌐 View Live Project</a>
+                        </div>
+                    </div>
+                </div>
+          
+                <div class="project-card deloitte-card">
+                   
+                    
+                    <div class="project-info">
+                        <h3 style="color: #86BC25;">📊 Data Analytics Simulation</h3>
+                        <p>🔍 Professional simulation creating forensic data dashboards and reports</p>
+                        
+                        <div class="case-study-summary">
+                            <p><strong>🏆 Achievement:</strong> Completed all simulation tasks with 100% completion rate</p>
+                            <p><strong>🛠️ Tools:</strong> Tableau, Excel, PowerPoint</p>
+                        </div>
+                        
+                        <button class="case-study-toggle btn" style="background-color: #86BC25; margin-top: 10px;" onclick="toggleCaseStudy('deloitte-case')">
+                            📖 View Case Study
+                        </button>
+                        
+                        <div class="project-links">
+                            <a href="https://www.theforage.com/simulations/deloitte-au/data-analytics-s5zy" class="btn" style="background-color: #86BC25;">👨‍💼 View Simulation</a>
+                        </div>
+                    </div>
+                    
+                    <div id="deloitte-case" class="case-study-content" style="display: none;">
+                        <h4 style="color: #86BC25; margin-bottom: 1rem;">Case Study Details</h4>
+                        
+                        <div style="display: flex; gap: 2rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 250px;">
+                                <h5>📌 Tasks Completed</h5>
+                                <ul>
+                                    <li>Analyzed client requirements and data specifications</li>
+                                    <li>Cleaned and prepared datasets for analysis</li>
+                                    <li>Created interactive Tableau dashboards</li>
+                                    <li>Developed Excel reports with key insights</li>
+                                    <li>Prepared client presentation materials</li>
+                                </ul>
+                            </div>
+                            <div style="flex: 1; min-width: 250px;">
+                                <h5>🎯 Key Outcomes</h5>
+                                <ul>
+                                    <li>Identified 3 key financial anomalies in datasets</li>
+                                    <li>Reduced data processing time by 40% through automation</li>
+                                    <li>Developed 5 actionable recommendations for client</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div style="background-color: #f5f5f5; padding: 1rem; border-radius: 5px;">
+                            <h5>💡 Skills Demonstrated</h5>
+                            <div class="skills">
+                                <span class="skill" style="background-color: #86BC25;">Data Visualization</span>
+                                <span class="skill" style="background-color: #86BC25;">Financial Analysis</span>
+                                <span class="skill" style="background-color: #86BC25;">Tableau</span>
+                                <span class="skill" style="background-color: #86BC25;">Excel</span>
+                                <span class="skill" style="background-color: #86BC25;">Client Reporting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    
+                    <div class="project-info">
+                        <h3>🖼️ Deep Learning (CNN) Basics</h3>
+                        <p>🧠 TensorFlow | Built image classification models during IABAC® certification training.</p>
+                        <p>🏆 Part of my gold-standard certification portfolio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <h2>📬 Contact Me</h2>
+            
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">👤 Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">✉️ Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">💬 Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">📤 Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <h3>Evalyne Wambui Githua</h3>
+            <p>📌 Certified Data Scientist & Machine Learning Specialist</p>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/evalyn-wambui-a2a688289/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Lynn578" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:evalynegithuaw@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="1.EVALYNE_WAMBUI_GITHUA_CV.docx" download title="Download CV"><i class="fas fa-file-download"></i></a>
+            </div>
+            
+            <p>© 2025 🚀 All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleCaseStudy(id) {
+            const content = document.getElementById(id);
+            const button = event.target;
+            
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                button.textContent = "📕 Close Case Study";
+            } else {
+                content.style.display = "none";
+                button.textContent = "📖 View Case Study";
+            }
+        }
+    </script>
+</body>
+</html>
